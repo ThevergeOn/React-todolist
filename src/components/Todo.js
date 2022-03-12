@@ -66,7 +66,11 @@ class Todo extends Component {
   editTask = (id) => {
     const updatedArrayOfTask = this.state.arrayOfTask.map((task) => {
       if (task.id === id) {
-        task.title = this.state.editingText
+        if (this.state.editingText.length>0){
+          task.title = this.state.editingText;
+        }else{
+          alert('Please enter a valid task')
+        }
       }
       return task;
     })
