@@ -39,6 +39,7 @@ class Todo extends Component {
       () => { this.handleShow(this.state.arrayOfTask)}
         );
     this.handleShow(this.state.arrayOfTask);
+    this.setState({editingText:enteredTask})
   };
  
 
