@@ -32,7 +32,7 @@ class TodoList extends Component {
               type='text'
               id="edit-input"
               className="cursor"
-              value={this.props.title}
+              value={this.props.editingText}
               onChange={this.props.onChangeInput}
 
             />)
