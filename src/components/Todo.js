@@ -64,20 +64,22 @@ class Todo extends Component {
     this.handleShow(updatedArrayOfTask)
   }
 
-  editTask = (id) => {
-    const updatedArrayOfTask = this.state.arrayOfTask.map((task) => {
-      if (task.id === id) {
+  editTask = (task) => {
+    this.setState({ editingText: task.title })
+    const updatedArrayOfTask = this.state.arrayOfTask.map((tasks) => {
+      if (tasks.id === task.id) {
         if (this.state.editingText.length>0){
           task.title = this.state.editingText;
         }else{
           alert('Please enter a valid task')
         }
+        
       }
       return task;
     })
     this.setState({ arrayOfTask: updatedArrayOfTask });
     this.setState({ taskEditing: null })
-    this.setState({ editingText: '' })
+    this.setState({ editingText: task.title})
 
   }
   handleClearCompleted = () => {
@@ -127,7 +129,7 @@ class Todo extends Component {
                 onRemove={() => this.handleRemove(task.id)}
                 onComplete={() => this.handleCompleted(task.id)}
                 onChecked={task.completed}
-                onSubmitEdit={() => this.editTask(task.id)}
+                onSubmitEdit={() => this.editTask(task)}
                 onChangeInput={(e) => this.setState({ editingText: e.target.value })}
                 onChangingTitle={() => { this.setState({ taskEditing: task.id }) }}
                 editingText={this.state.editingText}
