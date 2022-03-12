@@ -55,8 +55,8 @@ class TodoList extends Component {
         <div>
 
           {this.props.taskEditing === this.props.id ?
-            (<input type="submit" className={'margin-r'} value="Submit" onClick={this.props.onSubmitEdit} />) :
-            (<input type="submit" className={'margin-r'} value="Edit" onClick={this.props.onChangingTitle} />)}
+            (<input type="submit" className={'margin-r pointer'} value="Submit" onClick={this.props.onSubmitEdit} />) :
+            (<input type="submit" className={'margin-r pointer'} value="Edit" onClick={this.props.onChangingTitle} />)}
 
           <button type="button" className="close" onClick={this.props.onRemove}>
             <span>✕</span>
