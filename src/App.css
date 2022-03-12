@@ -1,4 +1,4 @@
-@import url(./fontiran.css); 
+@import url(./fontiran.css);
 main {
   width: 100%;
   height: 100vh;
@@ -14,8 +14,8 @@ main {
 li {
   list-style: none;
 }
-@media (max-width:425px) {
-  main{
+@media (max-width: 425px) {
+  main {
     background-image: url(./images/bg-mobile-dark.jpg);
   }
 }

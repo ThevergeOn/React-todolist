@@ -1,8 +1,8 @@
-section{
+section {
   margin: 0 auto;
   width: 60%;
 }
-ul{
+ul {
   background-color: #484b6a;
   margin-bottom: 1rem;
   border-radius: 5px;
@@ -11,7 +11,6 @@ ul{
   margin-bottom: 1rem;
   border-radius: 5px;
   background-color: #484b6a;
-  
 }
 
 .main-div-bottom {
@@ -35,11 +34,11 @@ ul{
 .cursor {
   cursor: pointer;
 }
-.done-item{
+.done-item {
   text-decoration: line-through;
-  color:#898a8f;
+  color: #898a8f;
 }
-.format{
+.format {
   cursor: pointer;
 }
 .link-button {
@@ -51,8 +50,7 @@ ul{
   display: inline;
   margin: 0;
   padding: 0;
-  
 }
 .bottom-div li button {
-font-size: 0.7rem;
+  font-size: 0.7rem;
 }

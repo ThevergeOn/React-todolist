@@ -15,7 +15,7 @@ class Todo extends Component {
       taskEditing: null,
       editingText: '',
       itemsLeft: 0,
-      checked:false
+      checked: false
     }
   }
 
@@ -30,12 +30,12 @@ class Todo extends Component {
     };
 
     this.setState(
-       [{ arrayOfTask: this.state.arrayOfTask.push(currentTask) }],
-      () => { this.handleShow(this.state.arrayOfTask)}
-        );
+      [{ arrayOfTask: this.state.arrayOfTask.push(currentTask) }],
+      () => { this.handleShow(this.state.arrayOfTask) }
+    );
     this.handleShow(this.state.arrayOfTask);
   };
- 
+
 
   handleRemove = (id) => {
     const updatedArrayOfTask = this.state.arrayOfTask.filter(element => (element.id !== id))
@@ -50,7 +50,7 @@ class Todo extends Component {
       if (task.id === id) {
         task.completed = !task.completed;
         task.active = !task.active;
-        this.setState({ checked: !task.completed})
+        this.setState({ checked: !task.completed })
       }
       return task;
     })
@@ -112,10 +112,10 @@ class Todo extends Component {
           <ul className="todo-list-items" id="ul-list">
 
             {this.state.arrayOfTask.map((task) => {
-              if(this.state.filterStatus==='completed'){
-                if(!task.completed){
-                  return null ;
-                  }
+              if (this.state.filterStatus === 'completed') {
+                if (!task.completed) {
+                  return null;
+                }
               }
               if (this.state.filterStatus === 'active') {
                 if (!task.active) {
@@ -139,7 +139,7 @@ class Todo extends Component {
                 />
               )
             }
-           )}
+            )}
           </ul>
 
           <div className="main-div-bottom">

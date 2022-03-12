@@ -21,11 +21,11 @@ class TodoList extends Component {
   // if(taskObject.active) {
   //   checkBox.checked = taskObject.active;
   // }
-// checkHandler=()=>{
-//   if (ckeck){
-//     checked=
-//   }
-// }
+  // checkHandler=()=>{
+  //   if (ckeck){
+  //     checked=
+  //   }
+  // }
   render() {
     return (
       <li>
@@ -42,7 +42,7 @@ class TodoList extends Component {
               id="edit-input"
               value={this.props.editingText}
               onChange={this.props.onChangeInput}
-              
+
             />)
             :
             (<p

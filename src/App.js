@@ -3,7 +3,7 @@ import Todo from './components/Todo';
 import './App.css';
 class App extends Component {
 
-  render() { 
+  render() {
     return (
       <main>
         <Todo />
@@ -11,5 +11,5 @@ class App extends Component {
     );
   }
 }
- 
+
 export default App;

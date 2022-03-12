@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Header.css'
 import './Todo.css';
 class Header extends Component {
-  state = {  } 
-  render() { 
+  state = {}
+  render() {
     return (
       <div className="top-div-header">
         <h1>TODO</h1>
@@ -15,5 +15,5 @@ class Header extends Component {
     );
   }
 }
- 
+
 export default Header;

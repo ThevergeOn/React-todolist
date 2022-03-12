@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React, { Component } from 'react';
 import './TodoForm.css';
 // import { AiOutlinePlus } from 'react-icons/ai';
 
@@ -15,7 +15,7 @@ class TodoForm extends Component {
   submitHandler = (event) => {
     const task = this.state.enteredTask;
     this.props.onSaveTask(task);
-    this.setState({ enteredTask:''})
+    this.setState({ enteredTask: '' })
   };
 
   render() {
@@ -29,7 +29,7 @@ class TodoForm extends Component {
           value={this.state.enteredTask}
           onChange={this.taskChangeHandler}
         />
-        <input type='submit' onClick={this.submitHandler} value='Add Task'/>
+        <input type='submit' onClick={this.submitHandler} value='Add Task' />
       </div>
     );
   }

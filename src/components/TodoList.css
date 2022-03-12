@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
 }
-.todo-list-items li div p{
-  font-family:IRANSans;
-padding-left: 1rem;
+.todo-list-items li div p {
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 1rem;
 }
 .close {
   font-size: 1.2rem;
@@ -36,8 +36,8 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -webkit-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
   -o-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
 }
@@ -55,8 +55,8 @@ input[type="checkbox"]::before {
   transform: rotate(45deg);
   opacity: 0;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 input[type="checkbox"]:checked {
   color: white;
@@ -75,30 +75,30 @@ input[type="checkbox"]:checked::before {
 li {
   list-style: none;
 }
-.done-item{
+.done-item {
   text-decoration: line-through;
-  color:#898a8f;
+  color: #898a8f;
 }
-input[type="submit"]{
+input[type="submit"] {
   outline: 0;
   border: 0;
   border-radius: 5px;
   padding: 12px 0.7rem;
   font-size: 0.9rem;
-  font-family:"Josefin Sans", sans-serif,IRANSans;
+  font-family: "Josefin Sans", sans-serif, IRANSans;
   color: #fff;
-  background: #E45826;
+  background: #e45826;
 }
-.margin-r{
-margin-right: 1rem;
+.margin-r {
+  margin-right: 1rem;
 }
-.inputs{
-  width:90%;
+.inputs {
+  width: 90%;
 }
-#edit-input{
+#edit-input {
   margin-left: 1rem;
-  border:1px solid gray;
-  width:40%;
+  border: 1px solid gray;
+  width: 40%;
   padding: 6px 10px;
-  font-family:"Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
