@@ -17,13 +17,13 @@ class Todo extends Component {
       checked:false
     }
   }
-  componentDidMount() {
-    const json = localStorage.getItem('arrayOfTask');
-    const loadtTask =JSON.parse(json)
-    if (loadtTask){
-      this.setState({ filterTodo:loadtTask });
-    }
-  }
+//   componentDidMount() {
+//     const json = localStorage.getItem('arrayOfTask');
+//     const loadtTask =JSON.parse(json)
+//     if (loadtTask){
+//       this.setState({ filterTodo:loadtTask });
+//     }
+//   }
 
 
   saveTask = (enteredTask) => {
@@ -84,8 +84,8 @@ class Todo extends Component {
     let updatedArrayOfTask = array.filter(element => (element.completed !== true))
     this.setState({ itemsLeft: updatedArrayOfTask.length })
     this.filterHandler('all');
-    const json = JSON.stringify(this.state.arrayOfTask)
-    localStorage.setItem('arrayOfTask' ,json)
+//     const json = JSON.stringify(this.state.arrayOfTask)
+//     localStorage.setItem('arrayOfTask' ,json)
   }
 
 
