@@ -13,8 +13,8 @@ class TodoForm extends Component {
     this.setState({ enteredTask: event.target.value });
   };
   submitHandler = (event) => {
-    const task = this.state.enteredTask;
-    if (task > 0) {
+   const task = `${this.state.enteredTask}`;
+    if (task.length > 0) {
       this.props.onSaveTask(task);
     } else {
       alert('Please enter a valid task')
