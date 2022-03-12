@@ -1,0 +1,26 @@
+.form {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+}
+input{
+outline: 0;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 0.7rem;
+  font-size: 0.9rem;
+  font-family:"Josefin Sans", sans-serif;
+  color: #fff;
+  background-color: #484b6a;
+}
+.form input[type="text"]{
+  width: 75%;
+}
+.form input[type="submit"] {
+  flex:1;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #6EBF8B;
+
+}
