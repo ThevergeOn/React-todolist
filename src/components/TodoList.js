@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './TodoList.css';
-// import { FcCheckmark } from "react-icons/fc";
-// import { TiEdit } from 'react-icons/ti';
 
 class TodoList extends Component {
 
@@ -18,14 +16,7 @@ class TodoList extends Component {
     return classList;
   }
 
-  // if(taskObject.active) {
-  //   checkBox.checked = taskObject.active;
-  // }
-  // checkHandler=()=>{
-  //   if (ckeck){
-  //     checked=
-  //   }
-  // }
+ 
   render() {
     return (
       <li>
@@ -33,7 +24,7 @@ class TodoList extends Component {
           <input
             type="checkbox"
             onChange={this.props.onComplete}
-            Checked={this.props.completed}
+            checked={this.props.onChecked}
           />
 
           {this.props.taskEditing === this.props.id ?
