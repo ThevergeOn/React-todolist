@@ -29,7 +29,7 @@ class TodoList extends Component {
   render() {
     return (
       <li>
-        <div className="cursor inputs">
+        <div className="inputs">
           <input
             type="checkbox"
             onChange={this.props.onComplete}
@@ -40,6 +40,7 @@ class TodoList extends Component {
             (<input
               type='text'
               id="edit-input"
+              className="cursor"
               value={this.props.editingText}
               onChange={this.props.onChangeInput}
 
