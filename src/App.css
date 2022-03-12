@@ -15,6 +15,9 @@ main {
 li {
   list-style: none;
 }
+.pointer {
+  cursor: pointer;
+}
 @media (max-width: 425px) {
   main {
     background-image: url(./images/bg-mobile-dark.jpg);
