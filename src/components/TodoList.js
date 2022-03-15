@@ -1,64 +1,57 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import './TodoList.css';
 
-class TodoList extends Component {
+const TodoList=(props)=>{
 
-  constructor() {
-    super()
-    this.state = {}
-  }
-
-  checked = (ckeck) => {
+  const checked = (ckeck) => {
     let classList = "p-element ";
     if (ckeck) {
       classList += 'done-item'
     }
     return classList;
-  }
+  };
+  return(
+    
+    <li>
+      <div className="inputs">
+        <input
+          type="checkbox"
+          onChange={props.onComplete}
+          checked={props.onChecked}
+        />
 
- 
-  render() {
-    return (
-      <li>
-        <div className="inputs">
-          <input
-            type="checkbox"
-            onChange={this.props.onComplete}
-            checked={this.props.onChecked}
-          />
+        {props.taskEditing === props.id ?
+          (<input
+            type='text'
+            id="edit-input"
+            className="cursor"
+            value={props.editingText}
+            onChange={props.onChangeInput}
 
-          {this.props.taskEditing === this.props.id ?
-            (<input
-              type='text'
-              id="edit-input"
-              className="cursor"
-              value={this.props.editingText}
-              onChange={this.props.onChangeInput}
+          />)
+          :
+          (<p
+            className={checked(props.onChecked)}>
+            {props.title}
+          </p>
+          )}
 
-            />)
-            :
-            (<p
-              className={this.checked(this.props.onChecked)}>
-              {this.props.title}
-            </p>
-            )}
+      </div>
+      <div>
 
-        </div>
-        <div>
+        {props.taskEditing === props.id ?
+          (<input type="submit" className={'margin-r pointer'} value="Submit" onClick={props.onSubmitEdit} />) :
+          (<input type="submit" className={'margin-r pointer'} value="Edit" onClick={props.onChangingTitle} />)}
 
-          {this.props.taskEditing === this.props.id ?
-            (<input type="submit" className={'margin-r pointer'} value="Submit" onClick={this.props.onSubmitEdit} />) :
-            (<input type="submit" className={'margin-r pointer'} value="Edit" onClick={this.props.onChangingTitle} />)}
+        <button type="button" className="close" onClick={props.onRemove}>
+          <span>✕</span>
+        </button>
+      </div>
 
-          <button type="button" className="close" onClick={this.props.onRemove}>
-            <span>✕</span>
-          </button>
-        </div>
-
-      </li>
-    );
-  }
+    </li>
+  )
 }
+
 
 export default TodoList;
 

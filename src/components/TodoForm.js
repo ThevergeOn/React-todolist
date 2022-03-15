@@ -1,43 +1,34 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './TodoForm.css';
 // import { AiOutlinePlus } from 'react-icons/ai';
+const  TodoForm=(props)=>{
+  const [enteredTask, setEnteredTask]=useState('');
 
-class TodoForm extends Component {
-  constructor() {
-    super()
-    this.state = {
-      enteredTask: ''
-    }
-  }
-  taskChangeHandler = (event) => {
-    this.setState({ enteredTask: event.target.value });
+  const taskChangeHandler = (event) => {
+    setEnteredTask(event.target.value)
   };
-  submitHandler = (event) => {
-   const task = `${this.state.enteredTask}`;
+  const submitHandler = (event) => {
+    const task = enteredTask;
     if (task.length > 0) {
-      this.props.onSaveTask(task);
+      props.onSaveTask(task);
     } else {
       alert('Please enter a valid task')
     }
-    
-    this.setState({ enteredTask:''})
+    setEnteredTask('')
   };
-
-  render() {
-    return (
-      <div className="form">
+  return(
+     <div className="form">
         <input
           id="myInput"
           className="inputValue"
           type="text"
           placeholder="Creat a new todo..."
-          value={this.state.enteredTask}
-          onChange={this.taskChangeHandler}
+          value={enteredTask}
+          onChange={taskChangeHandler}
         />
-        <input type='submit' onClick={this.submitHandler} value='Add Task' />
+        <input type='submit' onClick={submitHandler} value='Add Task' />
       </div>
-    );
-  }
+  )
 }
 
 export default TodoForm;
