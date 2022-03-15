@@ -1,0 +1,12 @@
+.top-div-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+h1 {
+  letter-spacing: 5px;
+  font-size: 1.3rem;
+  align-self: center;
+  color: #fff;
+}

@@ -1,0 +1,104 @@
+.todo-list-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0.8rem;
+  border-bottom: 1px solid gray;
+}
+.todo-list-items li div {
+  display: flex;
+  align-items: center;
+}
+.todo-list-items li div p {
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 1rem;
+}
+.close {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+}
+.close {
+  color: #fff;
+}
+.close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  border-radius: 50%;
+  position: relative;
+  width: 1.8em;
+  height: 1.8em;
+  border: 1px solid gray;
+  appearance: none;
+  cursor: pointer;
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+  -o-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+input[type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 9px;
+  width: 3px;
+  height: 7px;
+  border-style: solid;
+  border-color: white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+input[type="checkbox"]:checked {
+  color: white;
+  background: linear-gradient(
+    270deg,
+    rgba(169, 90, 218, 1) 31%,
+    rgba(31, 161, 185, 1) 100%
+  );
+}
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+.cursor {
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+.done-item {
+  text-decoration: line-through;
+  color: #898a8f;
+}
+input[type="submit"] {
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 0.7rem;
+  font-size: 0.9rem;
+  font-family: "Josefin Sans", sans-serif, IRANSans;
+  color: #fff;
+  background: #e45826;
+}
+.margin-r {
+  margin-right: 1rem;
+}
+.inputs {
+  width: 90%;
+}
+#edit-input {
+  margin-left: 1rem;
+  border: 1px solid gray;
+  width: 60%;
+  padding: 6px 10px;
+  font-family: "Josefin Sans", sans-serif;
+}

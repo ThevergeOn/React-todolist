@@ -1,0 +1,24 @@
+main {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+}
+main {
+  color: #fff;
+  background-image: url(./images/bg-desktop-dark.jpg);
+  background-color: #292b3a;
+}
+li {
+  list-style: none;
+}
+.pointer {
+  cursor: pointer;
+}
+@media (max-width: 425px) {
+  main {
+    background-image: url(./images/bg-mobile-dark.jpg);
+  }
+}
