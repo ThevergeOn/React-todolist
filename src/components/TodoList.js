@@ -1,7 +1,7 @@
-import React  from 'react';
+import React from 'react';
 import './TodoList.css';
 
-const TodoList=(props)=>{
+const TodoList = (props) => {
 
   const checked = (ckeck) => {
     let classList = "p-element ";
@@ -10,8 +10,8 @@ const TodoList=(props)=>{
     }
     return classList;
   };
-  return(
-    
+  return (
+
     <li>
       <div className="inputs">
         <input

@@ -54,8 +54,8 @@ ul {
 .bottom-div li button {
   font-size: 0.7rem;
 }
-@media (max-width:768px){
-  section{
+@media (max-width: 768px) {
+  section {
     width: 70%;
   }
 }
