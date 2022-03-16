@@ -44,9 +44,9 @@ const Todo = () => {
     })
     setArrayOfTask(updatedArrayOfTask);
   };
-  const editTask = (task) => {
-    arrayOfTask.map((tasks) => {
-      if (tasks.id === task.id) {
+ onst editTask = (id) => {
+    const updatedArrayOfTask=arrayOfTask.map((task) => {
+      if (task.id === id) {
         if (editingText.length > 0) {
           task.title = editingText;
         } else {
@@ -56,8 +56,8 @@ const Todo = () => {
       }
       return task;
     })
+    setArrayOfTask(updatedArrayOfTask);
     setTaskEditing(null);
-    setEditingText(task.title);
   };
   const handleClearCompleted = () => {
     setArrayOfTask(arrayOfTask.filter(element => element.completed !== true));
@@ -103,7 +103,7 @@ const Todo = () => {
               onRemove={() => handleRemove(task.id)}
               onComplete={() => handleCompleted(task.id)}
               onChecked={task.completed}
-              onSubmitEdit={() => editTask(task)}
+              onSubmitEdit={() => editTask(task.id)}
               onChangeInput={(e) => setEditingText(e.target.value)}
               onChangingTitle={() => {
                 return (
