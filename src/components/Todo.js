@@ -44,7 +44,7 @@ const Todo = () => {
     })
     setArrayOfTask(updatedArrayOfTask);
   };
- const editTask = (id) => {
+ onst editTask = (id) => {
     const updatedArrayOfTask=arrayOfTask.map((task) => {
       if (task.id === id) {
         if (editingText.length > 0) {
